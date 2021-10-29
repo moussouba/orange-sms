@@ -11,7 +11,7 @@ A php library to interact with the orange sms api for MiddleEast and Africa.
 
 Using composer:
 ```
-$ composer require mediumart/orange-sms
+$ composer require moussouba/orange-sms
 ```
 
 ## Usage
