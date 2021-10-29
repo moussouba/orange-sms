@@ -1,13 +1,13 @@
 {
-    "name": "mediumart/orange-sms",
+    "name": "moussouba/orange-sms",
     "type": "library",
     "license": "MIT",
     "keywords": ["orange", "orange-api", "sms"],
     "description": "A php library to interact with the orange sms api for MiddleEast and Africa.",
     "authors": [
         {
-            "name": "Isaac Esso",
-            "email": "daprod2009@gmail.com"
+            "name": "Yves Mousouba",
+            "email": "yves.mousouba@gmail.com"
         }
     ],
     "require": {
