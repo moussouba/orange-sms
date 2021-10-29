@@ -56,7 +56,9 @@ class AuthorizationRequest extends SMSClientRequest
     {
         return [
             'headers' => [
-                'Authorization' => "Basic " . base64_encode("{$this->clientID}:{$this->clientSecret}")
+                'Authorization' => "Basic " . base64_encode("{$this->clientID}:{$this->clientSecret}"),
+                'Content-Type' => 'application/x-www-form-urlencoded',
+                'Accept' => 'application/json'
             ],
             'form_params' => [
                 'grant_type' => 'client_credentials'
