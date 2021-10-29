@@ -24,15 +24,7 @@ use Mediumart\Orange\SMS\Http\SMSClient;
 /**
 * if you already have a valid access token
 * */
-$client = SMSClient::getInstance('<your_access_token>');
-
-// OR
-
-/**
-* directly using <client_id> and <client_secret>
-* */
-$client = SMSClient::getInstance('<client_id>', '<client_secret>');
-```
+$client = SMSClient::getInstance('<your_authorization_header>');
 
 next step, create an `SMS` object passing it the `$client` :
 ```php
