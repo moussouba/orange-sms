@@ -6,25 +6,16 @@ use Mediumart\Orange\SMS\Http\SMSClientRequest;
 
 class AuthorizationRequest extends SMSClientRequest
 {
-    /**
-     * @var string
-     */
-    private $clientID;
-
-    /**
-     * @var string
-     */
-    private $clientSecret;
+    private $auth_header;
 
     /**
      * AuthorizeClientRequest constructor.
      * @param $clientID
      * @param $clientSecret
      */
-    public function __construct($clientID, $clientSecret)
+    public function __construct($authHeader)
     {
-        $this->clientID = $clientID;
-        $this->clientSecret = $clientSecret;
+        $this->auth_header = $authHeader;
     }
 
     /**
@@ -56,7 +47,7 @@ class AuthorizationRequest extends SMSClientRequest
     {
         return [
             'headers' => [
-                'Authorization' => "Basic " . base64_encode("{$this->clientID}:{$this->clientSecret}"),
+                'Authorization' => "Basic " .$this->auth_header,
                 'Content-Type' => 'application/x-www-form-urlencoded',
                 'Accept' => 'application/json'
             ],

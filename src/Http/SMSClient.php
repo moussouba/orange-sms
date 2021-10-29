@@ -100,7 +100,7 @@ class SMSClient
 
             case 2:
                 $this->configureInstanceAssoc(
-                    static::authorize($options[0], $options[1])
+                    static::authorize($options[0])
                 );
                 break;
 
@@ -173,10 +173,10 @@ class SMSClient
      * @param $clientSecret
      * @return array
      */
-    public static function authorize($clientID, $clientSecret)
+    public static function authorize($authHeader)
     {
         return json_decode(
-            (new AuthorizationRequest($clientID, $clientSecret))->execute()->getBody(), true
+            (new AuthorizationRequest($authHeader))->execute()->getBody(), true
         );
     }
 
