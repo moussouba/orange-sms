@@ -93,12 +93,7 @@ class SMSClient
         switch (count($options = func_get_args())) {
             case 0:
                 break;
-
             case 1:
-                $this->configureInstance($options[0]);
-                break;
-
-            case 2:
                 $this->configureInstanceAssoc(
                     static::authorize($options[0])
                 );

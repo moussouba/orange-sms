@@ -47,7 +47,7 @@ class AuthorizationRequest extends SMSClientRequest
     {
         return [
             'headers' => [
-                'Authorization' => "Basic " .$this->auth_header,
+                'Authorization' => "Basic ".$this->auth_header,
                 'Content-Type' => 'application/x-www-form-urlencoded',
                 'Accept' => 'application/json'
             ],
